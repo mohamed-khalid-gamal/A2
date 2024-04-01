@@ -758,15 +758,17 @@ header ul .active a
         display: none;
     }
 
-    .mo
-    {
-        border-top: 1px solid var(--header-color-green);
-        color: white;
-        text-align: center;
-        background-color: var(--back-color);
-        padding: 10px;
-        width: 100%;
-    }
+
+}
+
+.mo
+{
+    border-top: 1px solid #ddd;
+    color: white;
+    text-align: center;
+    background-color: var(--back-color);
+    padding: 10px;
+    width: 100%;
 }
 
 /* contact */
