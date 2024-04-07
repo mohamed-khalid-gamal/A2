@@ -60,3 +60,19 @@ function prices(a) {
     });
   });
 }
+function reveal() {
+  let rights = document.querySelectorAll(".right");
+  let hiddens = document.querySelectorAll(".hidden");
+  let lefts = document.querySelectorAll(".left");
+  for (i of [...hiddens, ...lefts, ...rights]) {
+    var windowHeight = window.innerHeight;
+    var elementTop = i.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 50) {
+      i.classList.add("active");
+    } else if (elementTop > 0) {
+      i.classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
