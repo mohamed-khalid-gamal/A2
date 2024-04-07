@@ -12,14 +12,6 @@ let but3 = document.querySelectorAll(
   "#packages > div.package.diamond > div.mon > button",
 );
 let price = document.querySelectorAll("#packages > div.package > div.price");
-// let done = false;
-// navs.forEach((e) => {
-//   e.addEventListener("click", () => {
-//     navs.forEach((e) => e.classList.remove("active"));
-//     e.classList.add("active");
-//   });
-// });
-
 if (bar || close) {
   bar.addEventListener("click", () => {
     close.style.display = "block";
