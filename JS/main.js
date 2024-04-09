@@ -2,6 +2,7 @@ let bar = document.querySelector(".bar");
 let close = document.querySelector(".close");
 let navs = document.querySelectorAll("header ul li");
 let nav = document.querySelector("header ul");
+let loader = document.querySelector(".p1");
 let but1 = document.querySelectorAll(
   "#packages > div.package.eco > div.mon > button",
 );
@@ -68,3 +69,6 @@ function reveal() {
 }
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
+window.addEventListener("load", () => {
+  loader.style.display = "none";
+});
