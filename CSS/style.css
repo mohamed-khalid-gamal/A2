@@ -581,14 +581,14 @@ header ul .active a
     gap: 8px;
 }
 
-#packages .package .mon button
+#packages .package button
 {
     cursor: pointer;
     font-size: 15px;
     border: 1px solid #ddd;
 }
 
-#packages .package .mon button.active
+#packages .package button.active
 {
     background-color: var(--header-color-green);
     color: white;

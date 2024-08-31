@@ -13,6 +13,9 @@ let but2 = document.querySelectorAll(
 let but3 = document.querySelectorAll(
   "#packages > div.package.diamond > div.mon > button",
 );
+let but3_2 = document.querySelectorAll(
+  "#packages > div.package.diamond > div.mon_pr > button",
+);
 let price = document.querySelectorAll("#packages > div.package > div.price");
 if (bar || close) {
   bar.addEventListener("click", () => {
@@ -26,7 +29,6 @@ if (bar || close) {
 }
 prices(but1);
 prices(but2);
-prices(but3);
 function prices(a) {
   a.forEach((e) => {
     e.addEventListener("click", function () {
@@ -44,7 +46,19 @@ function prices(a) {
         price[2].textContent = price[2].getAttribute("data-3mon") + " EGY";
       } else if (e == but2[2]) {
         price[2].textContent = price[2].getAttribute("data-6mon") + " EGY";
-      } else if (e == but3[0]) {
+      }
+    });
+  });
+}
+prices_pr(but3, but3_2);
+function prices_pr(a, b) {
+  a.forEach((e) => {
+    e.addEventListener("click", function () {
+      a.forEach((btn) => btn.classList.remove("active"));
+      e.classList.add("active");
+      but3_2[1].classList.remove("active");
+      but3_2[0].classList.add("active");
+      if (e == but3[0]) {
         price[1].textContent = price[1].getAttribute("data-mon") + " EGY";
       } else if (e == but3[1]) {
         price[1].textContent = price[1].getAttribute("data-3mon") + " EGY";
@@ -52,6 +66,30 @@ function prices(a) {
         price[1].textContent = price[1].getAttribute("data-6mon") + " EGY";
       }
     });
+    b.forEach((x) => {
+      x.addEventListener("click", function () {
+        b.forEach((btn) => btn.classList.remove("active"));
+        x.classList.add("active");
+        if (x.classList.contains("active") && e.classList.contains("active")) {
+          if (e == but3[0] && x == but3_2[0]) {
+            price[1].textContent = price[1].getAttribute("data-mon") + " EGY";
+          } else if (e == but3[0] && x == but3_2[1]) {
+            price[1].textContent = price[1].getAttribute("data-mon-2") + " EGY";
+          } else if (e == but3[1] && x == but3_2[0]) {
+            price[1].textContent = price[1].getAttribute("data-3mon") + " EGY";
+          } else if (e == but3[1] && x == but3_2[1]) {
+            price[1].textContent =
+              price[1].getAttribute("data-3mon-2") + " EGY";
+          } else if (e == but3[2] && x == but3_2[0]) {
+            price[1].textContent = price[1].getAttribute("data-6mon") + " EGY";
+          } else if (e == but3[2] && x == but3_2[1]) {
+            price[1].textContent =
+              price[1].getAttribute("data-6mon-2") + " EGY";
+          }
+        }
+      });
+    });
+    b.forEach((x) => {});
   });
 }
 function reveal() {
