@@ -526,8 +526,10 @@ header ul .active a
         padding: var(--mob-padding);
     }
     #packages .package { width: 100%; }
-    #packages>div.package>button { width: 100%; box-sizing: border-box; }
-    #packages .package button { font-size: 18px; padding: 12px 14px; }
+    #packages>div.package>button,
+    #packages>div.package>a.wa-btn { width: 100%; box-sizing: border-box; }
+    #packages .package button,
+    #packages .package a.wa-btn { font-size: 18px; padding: 12px 14px; }
 }
 
 #reviews
@@ -726,17 +728,32 @@ header ul .active a
     color: #61ce70;
 }
 
-#packages>div.package>button
+#packages>div.package>button,
+#packages>div.package>a.wa-btn
 {
     background-color: var(--header-color-green);
     width: 50%;
     margin: 20px 0;
     transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-weight: 700;
 }
 
-#packages>div.package>button:hover
+#packages>div.package>button:hover,
+#packages>div.package>a.wa-btn:hover
 {
     background-color: #f3af5d;
+}
+
+/* make wa-btn respond faster on touch */
+#packages>div.package>a.wa-btn {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
 }
 
 #packages .package .price
