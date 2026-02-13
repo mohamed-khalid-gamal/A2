@@ -505,6 +505,118 @@ header ul .active a
     {
         width: 25%;
     }
+
+    /* make transformation gallery images scale on small screens */
+    #transform .images img {
+        max-width: 80%;
+        border-width: 2px;
+    }
+
+    /* reviews: make tab buttons touch-friendly and galleries responsive */
+    #reviews .tabs .tab-btn {
+        padding: 12px 14px;
+        font-size: 16px;
+    }
+    #reviews .tabs { gap: 8px; }
+    #reviews .review-gallery img { max-width: 80%; }
+
+    /* packages: make buttons full-width and cards stack nicely */
+    #packages {
+        grid-template-columns: 1fr;
+        padding: var(--mob-padding);
+    }
+    #packages .package { width: 100%; }
+    #packages>div.package>button { width: 100%; box-sizing: border-box; }
+    #packages .package button { font-size: 18px; padding: 12px 14px; }
+}
+
+#reviews
+{
+    display: flex;
+    flex-direction: column;
+    padding: var(--page-padding);
+    background-color: var(--back-color);
+}
+
+#reviews h3
+{
+    font-family: "Aref Ruqaa", serif;
+    color: var(--header-color-green);
+    text-align: center;
+    font-size: 50px;
+    padding: 20px;
+    position: relative;
+}
+
+#reviews h3::after
+{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    width: 7%;
+    height: 3px;
+    background-color: var(--header-color-green);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#reviews .tabs
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0 20px;
+}
+
+#reviews .tabs .tab-btn
+{
+    font-size: 18px;
+    padding: 10px 18px;
+}
+
+#reviews .tabs .tab-btn.active
+{
+    background-color: var(--header-color-green);
+    color: white;
+}
+
+#reviews .review-gallery
+{
+    display: none;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    padding: 20px 0;
+}
+
+#reviews .review-gallery.active
+{
+    display: flex;
+}
+
+#reviews .review-gallery img
+{
+    border: 3px solid white;
+    max-width: 300px;
+}
+
+@media (max-width:768px)
+{
+    #reviews
+    {
+        padding: var(--mob-padding);
+    }
+
+    #reviews h3::after
+    {
+        width: 25%;
+    }
+
+    #reviews .tabs
+    {
+        flex-wrap: wrap;
+    }
 }
 
 /* home end */

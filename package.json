@@ -1,0 +1,9 @@
+{
+  "name": "a-power-2-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "generate-images": "node scripts/generate-images.js",
+    "watch-images": "node scripts/watch-images.js"
+  }
+}

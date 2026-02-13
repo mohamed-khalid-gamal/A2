@@ -12,7 +12,7 @@
     <link
     rel="stylesheet"
     href="CSS/all.min.css" />
-    <link rel="stylesheet" href="CSS/style.css"" />
+    <link rel="stylesheet" href="CSS/style.css" />
     <!-- css -->
     <!-- google fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,6 +37,7 @@
             <li class=""><a href="#">الرئيسية </a></li>
             <li><a href="#packages">إشترك معنا</a></li>
             <li><a href="#transform">التحولات</a></li>
+            <li><a href="#reviews">الاراء</a></li>
             <li><a href="#social">تواصل معنا</a></li>
         </ul>
         
@@ -44,7 +45,7 @@
     </header>
     <section id="home">
         <div class="image right">
-            <img src="imgs/InShot_20240318_221052191.png" alt="">
+            <img src="imgs/utilits/InShot_20240318_221052191.png" alt="">
 
         </div>
         <div class="text hidden">
@@ -68,23 +69,23 @@
             <p>سهولة وتوافر جميع وسائل وطرق الدفع اونلاين، بحيث انك تقدر الدفع باستخدام طرق متعددة مثل “الفيزا الخاصة بيك  ، فودافون كاش، إنستا باي”</p>
         </div>
         <div class="image left">
-            <img src="imgs/WhatsApp_Image_2024-03-18_at_19.07.51_4d15ea47-ai-brush-removebg-bn6vm5lt__1___1_-removebg-preview.png" alt="">
+            <img src="imgs/utilits/WhatsApp_Image_2024-03-18_at_19.07.51_4d15ea47-ai-brush-removebg-bn6vm5lt__1___1_-removebg-preview.png" alt="">
         </div>
     </section>
     <section id="transform" >
         <h3>التحولات</h3>
         <div class="images">
             <i></i>
-            <img src="imgs/1.jpg" alt="">
-            <img src="imgs/2.jpg" alt="">
-            <img src="imgs/3.jpg" alt="">
-            <img src="imgs/4.jpg" alt="">
-            <img src="imgs/5.jpg" alt="">
-            <img src="imgs/6.jpg" alt="">
-            <img src="imgs/7.jpg" alt="">
-            <img src="imgs/8.jpg" alt="">
-            <img src="imgs/9.jpg" alt="">
         </div>
+    </section>
+    <section id="reviews">
+        <h3>الاراء</h3>
+        <div class="tabs">
+            <button class="tab-btn active" data-target="girls">أراء البنات</button>
+            <button class="tab-btn" data-target="boys">أراء الشباب</button>
+        </div>
+        <div class="review-gallery active" data-gallery="girls"></div>
+        <div class="review-gallery" data-gallery="boys"></div>
     </section>
     <section id="packages">
         <h3>الاشتراكات</h3>
@@ -108,7 +109,7 @@
                     <li><i class="fa-regular fa-circle-check"></i> متابعة النتايج و تغيير خطة التغذي حسب مدى تطورك و معدل إلتزامك</li>
                 </ul>
             </div>
-            <button> <a href="https://wa.me/+201201520308">أشترك الان </a></button>
+            <button> <a class="wa-btn" data-plan="Economy" href="https://wa.me/+201201520308">أشترك الان </a></button>
         </div>
          <div class="package diamond hidden">
             <div class="title">
@@ -135,7 +136,7 @@
                     <li><i class="fa-regular fa-circle-check"></i> متابعة النتايج و تغيير خطة التغذي حسب مدى تطورك و معدل إلتزامك</li>
                 </ul>
             </div>
-            <button> <a href="https://wa.me/+201201520308">أشترك الان </a></button>
+            <button> <a class="wa-btn" data-plan="Diamond" href="https://wa.me/+201201520308">أشترك الان </a></button>
         </div>
         <div class="package pro left">
             <div class="title">
@@ -157,7 +158,7 @@
                     <li><i class="fa-regular fa-circle-check"></i> متابعة النتايج و تغيير خطة التغذي حسب مدى تطورك و معدل إلتزامك</li>
                 </ul>
             </div>
-            <button> <a href="https://wa.me/+201201520308">أشترك الان </a></button>
+            <button> <a class="wa-btn" data-plan="Pro" href="https://wa.me/+201201520308">أشترك الان </a></button>
         </div>
     </section>
     <section id="social">     
@@ -177,7 +178,7 @@
                 </div>
             </div>     
             <div class="image left">
-                <img src="imgs/Social tree-cuate.png" alt="">
+                <img src="imgs/utilits/Social tree-cuate.png" alt="">
             </div>
         </div>
     </section>
